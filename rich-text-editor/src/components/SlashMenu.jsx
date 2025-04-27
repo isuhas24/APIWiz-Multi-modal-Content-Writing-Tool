@@ -1,9 +1,10 @@
 import React from "react";
+import styles from '../styles/editor.module.css';
 
 const SlashMenu = ({ position, options, activeIndex, setActiveIndex, onSelect }) => {
   return (
     <div
-      className="slash-menu"
+      className={styles.slash_menu}
       role="listbox"
       aria-label="Command Menu"
     //   dynamically positionaing the slash menu.
@@ -22,18 +23,18 @@ const SlashMenu = ({ position, options, activeIndex, setActiveIndex, onSelect })
         {/* rendering the options dynamically */}
         {options.map((item, index) => (
             <div
-            key={item.type}
-            role="option"
-            aria-selected={activeIndex === index}
-            onMouseEnter={() => setActiveIndex(index)}
-            onClick={() => onSelect(item.type)}
-            style={{
-                padding: "8px",
-                backgroundColor: activeIndex === index ? "#eee" : "white",
-                cursor: "pointer",
-            }}
+                key={item.type}
+                role="option"
+                aria-selected={activeIndex === index}
+                onMouseEnter={() => setActiveIndex(index)}
+                onClick={() => onSelect(item.type)}
+                style={{
+                    padding: "8px",
+                    backgroundColor: activeIndex === index ? "#eee" : "white",
+                    cursor: "pointer",
+                }}
             >
-            {item.label}
+                {item.label}
             </div>
         ))}
     </div>

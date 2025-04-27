@@ -3,10 +3,11 @@ import React from "react";
 // importing utils 
 // util function that executes the format text operation.
 import { formatText } from "@/utils/commands";
+import styles from '../styles/editor.module.css';
 
 const Toolbar = ({ insertBlockAtCursor }) => {
   return (
-    <div className="toolbar">
+    <div className={styles.toolbar}>
         {/* button to turn the selected text into bold */}
         <button onClick={() => formatText("bold")}><b>B</b></button>
 
