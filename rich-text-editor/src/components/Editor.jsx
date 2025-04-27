@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import "../styles/editor.css";
+import "../../src/styles/editor.css";
 import Toolbar from "./Toolbar";
 import SlashMenu from "./SlashMenu";
 // importing the utils
