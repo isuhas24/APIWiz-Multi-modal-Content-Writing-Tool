@@ -7,7 +7,7 @@ const Editor = dynamic(() => import("../components/Editor"), { ssr: false });
 export default function Home() {
   return (
     <main style={{ padding: '20px' }}>
-      <h1>📝 Rich Text Editor</h1>
+      <h1>Multi-Modal Content Writing Tool</h1>
       <Editor />
     </main>
   );
